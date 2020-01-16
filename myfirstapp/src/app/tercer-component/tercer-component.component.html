@@ -19,3 +19,17 @@
 
 <p>Los datos del formulario son:</p>
 <pre>{{datos|json}}</pre>
+
+<select [(ngModel)]="opSel" (ngModelChange)="selecction($event)">
+    <option *ngFor="let op of opciones" [ngValue]="op">
+        {{op.id}} - {{op.nombre}}
+    </option>
+</select>
+
+<div *ngIf="opSel">
+  <p>
+    Has seleccionado: {{ opSel.nombre }}. Valor: {{opSel.id}}
+  </p>
+  <pre>{{opSel|json
+    }}</pre>
+</div>
