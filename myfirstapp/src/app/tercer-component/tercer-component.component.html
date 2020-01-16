@@ -1,0 +1,21 @@
+<p *ngIf="mostrar">
+  Esto se mostrara en primer-componente dependiendo de mostrar
+</p>
+
+<p>Ahora ponemos un formulario:</p>
+<form>
+  <label>Nombre:</label>
+  <input type="text" name="nombre" [(ngModel)]="datos.nombre"><br><br>
+  <label>Apellidos:</label>
+  <input type="text" name="apellidos" [(ngModel)]="datos.apellido"><br><br>
+  <label>Estatura:</label>
+  <input type="text" name="estatura" [(ngModel)]="datos.estatura"><br><br>
+  <label>Fecha de nacimiento:</label>
+  <input type="text" name="fnacimiento" [(ngModel)]="datos.fnacimiento"><br><br>
+
+  <button (click)="enviar()">Enviar</button>
+  <button (click)="limpiar()">Limpiar</button>
+</form>
+
+<p>Los datos del formulario son:</p>
+<pre>{{datos|json}}</pre>

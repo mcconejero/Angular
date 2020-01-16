@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-primer-component',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primer-component.component.css']
 })
 export class PrimerComponentComponent implements OnInit {
+  @Input() nombreComponent;
 
-
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
   }

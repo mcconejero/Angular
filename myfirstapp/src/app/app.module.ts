@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { PrimerComponentComponent } from './primer-component/primer-component.component';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
+import { PrimerComponentComponent } from './primer-component/primer-component.component';
+import { SegundoComponentComponent } from './segundo-component/segundo-component.component';
+import { TercerComponentComponent } from './tercer-component/tercer-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HolaMundoComponent,
     PrimerComponentComponent,
-    HolaMundoComponent
+    SegundoComponentComponent,
+    TercerComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
