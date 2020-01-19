@@ -1,0 +1,29 @@
+<form (ngSubmit)="createHobbit()">
+  <input type="text" name="nombre" [(ngModel)]="newName" />
+  <button type="submit">Añadir Hobbit</button>
+</form>
+
+<br><br>
+
+<form (ngSubmit)="updateHobbit()">
+  <input id="inputUpdate" type="text" name="nombre" [(ngModel)]="updateName"/>
+  <button type="submit">Modificar Hobbit</button>
+</form>
+
+<br><br>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>NOMBRE</th>
+      <th colspan="2">ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hobbit of list; let i=index">
+      <td>{{ hobbit.nombre }}</td>
+      <td><button (click)="getHobbit(i)">Modificar</button></td>
+      <td><button (click)="removeHobbit(i)">Borrar</button></td>
+    </tr>
+  </tbody>
+</table>

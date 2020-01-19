@@ -8,6 +8,7 @@ import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
 import { PrimerComponentComponent } from './primer-component/primer-component.component';
 import { SegundoComponentComponent } from './segundo-component/segundo-component.component';
 import { TercerComponentComponent } from './tercer-component/tercer-component.component';
+import { HobbitComponentComponent } from './hobbit-component/hobbit-component.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TercerComponentComponent } from './tercer-component/tercer-component.co
     HolaMundoComponent,
     PrimerComponentComponent,
     SegundoComponentComponent,
-    TercerComponentComponent
+    TercerComponentComponent,
+    HobbitComponentComponent
   ],
   imports: [
     BrowserModule,
