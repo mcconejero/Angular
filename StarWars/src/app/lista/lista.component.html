@@ -1,0 +1,35 @@
+<h3>Ejemplo de llamada a la API de STAR WARS</h3>
+<br />
+  <table id="personajes" class="estilo_Tabla_1">
+    <caption>Personajes STAR WARS</caption>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>Nacimiento</th>
+        <th>Género</th>
+        <th>Homeworld</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoPersonajes">
+      <tr *ngFor="let pj of list; let i=index">
+        <td>{{ pj.name }}</td>
+        <td>{{ pj.height }}</td>
+        <td>{{ pj.mass }}</td>
+        <td>{{ pj.birth_year }}</td>
+        <td>{{ pj.gender }}</td>
+        <td><a href="pj.homeworld">{{pj.homeworld}}</a></td>
+        <td><button value="Editar" (click)="editHobbit(nombre)">Modificar</button></td>
+        <td><button value="Eliminar" (click)="removeHobbit(i)">Borrar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button id="btAnterior">Anterior</button>
+    <button id="btSiguiente">Siguiente</button>
+  </div>
+
+
+<br />
+<div id="datosPlaneta">Datos del planeta:</div>
