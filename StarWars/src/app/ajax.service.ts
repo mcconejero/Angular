@@ -13,4 +13,8 @@ export class AjaxService {
   peticion(){
     return this.http.get(this.urlPersonajes);
   }
+
+  peticionDir(url){
+    return this.http.get(url);
+  }
 }

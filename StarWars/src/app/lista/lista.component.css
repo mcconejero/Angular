@@ -29,8 +29,18 @@ caption {
     color: green;
 }
 button{
+    width: 100%;
+    background-color: pink;
+}
+
+#buttons{
+    width: 70%;
+}
+
+input{
     margin-right: 2em;
     border-radius: 11px;
-    height: 35px;
+    width: 150px;
+    height: 50px;
     background-color: pink;
 }
