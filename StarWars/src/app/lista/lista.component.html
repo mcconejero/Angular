@@ -26,10 +26,9 @@
     </tbody>
   </table>
   <div id="buttons">
-    <input id="btSiguiente" type="button" (click)="prev()" value="Anterior">
-    <input id="btAnterior" type="button" (click)="next()" value="Siguiente">
+    <input type="button" (click)="direction(data.previous)" [disabled]="!(data && data.previous)" value="Anterior">
+    <input type="button" (click)="direction(data.next)" [disabled]="!(data && data.next)" value="Siguiente">
   </div>
-
 
 <br />
 <div id="datosPlaneta">Datos del planeta:</div>

@@ -13,7 +13,6 @@ export class ListaComponent implements OnInit {
 
   constructor(private service: AjaxService) {
     this.service.peticion().subscribe(datas => {
-      console.log(datas);
       this.asignarDatos(datas);
     });
   }
@@ -25,15 +24,8 @@ export class ListaComponent implements OnInit {
     this.list = this.data.results;
   }
 
-  next() {
-    console.log(this.data.next);
-    this.service.peticionDir(this.data.next).subscribe(datas => {
-      this.asignarDatos(datas);
-    });
-  }
-
-  prev() {
-    this.service.peticionDir(this.data.previous).subscribe(datas => {
+  private direction(url:string) {
+    this.service.peticionDir(url).subscribe(datas => {
       this.asignarDatos(datas);
     });
   }

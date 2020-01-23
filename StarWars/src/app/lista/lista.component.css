@@ -44,3 +44,7 @@ input{
     height: 50px;
     background-color: pink;
 }
+
+input:disabled {
+    background-color: grey;
+}

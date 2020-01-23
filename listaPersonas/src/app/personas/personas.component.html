@@ -1,0 +1,36 @@
+<form>
+  <label for="dni">DNI:</label>
+  <input type="text" name="anade" [(ngModel)]="nuevaPersona.dni" placeholder="Introduzca el dni" value={{nuevaPersona.dni}}/>
+  <br />
+  <label for="nombre">NOMBRE:</label>
+  <input type="text" name="anade" [(ngModel)]="nuevaPersona.nombre" placeholder="Introduzca el nombre" value={{nuevaPersona.nombre}}/>
+  <br />
+  <label for="apellidos">APELLIDOS:</label>
+  <input type="text" name="anade" [(ngModel)]="nuevaPersona.apellidos" placeholder="Introduzca el apellidos" value={{nuevaPersona.apellidos}}/>
+
+  <br><br>
+
+  <input type="button" value="AÑADIR" (click)="create(nuevaPersona)"  value="{{accion.nombre}}"/>
+  <table id="personas">
+    <caption>Personas</caption>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>DNI</th>
+        <th>NOMBRE</th>
+        <th>APELLIDOS</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoPersonas">
+      <tr *ngFor="let p of list">
+        <td>{{ p.id }}</td>
+        <td>{{ p.dni }}</td>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.apellidos }}</td>
+        <td><input type="button" (click)="update(p)" value="Modificar"></td>
+        <td><input type="button" (click)="delete(p.id)" value="Borrar"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
