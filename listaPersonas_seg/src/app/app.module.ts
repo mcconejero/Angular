@@ -4,17 +4,15 @@ import { HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { AddComponent } from './add-component/add-component.component';
+import { PersonasComponent } from './personas/personas.component';
 import { FormsModule } from '@angular/forms';
 import { ListadoComponent } from './listado/listado.component';
-import { UpdateComponent } from './update-component/update-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent,
-    ListadoComponent,
-    UpdateComponent
+    PersonasComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,

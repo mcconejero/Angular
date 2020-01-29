@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <a class="btn btn-outline-success mb-2 shadow" routerLink="/personas-add/-1" role="button">Añadir Persona</a>
+    </div>
+    <div class="col-12">
+      <table class="table table-bordered table-hover text-center shadow">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>APELLIDOS</th>
+            <th colspan="2">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of list">
+            <td>{{ p.id }}</td>
+            <td>{{ p.dni }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.apellidos }}</td>
+            <td><input class="btn btn-outline-info shadow" type="button" routerLink="personas-update/{{p.id}}" value="Modificar">
+            </td>
+            <td><input class="btn btn-outline-danger shadow" type="button" (click)="delete(p)" value="Borrar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
